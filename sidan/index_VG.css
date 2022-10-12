@@ -3,7 +3,8 @@ body {
     background-image: url(images/background.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
+    line-height: 1.2;
 }
 
 .greybox {
@@ -16,16 +17,22 @@ body {
     padding: 5px 20px;
 }
 
+header {
+    font-family: "bungee shade";
+    color: rgba(223, 224, 228, 0.8);
+    margin-bottom: 50px;
+}
+
 nav {
     display: flex;
-    margin-bottom: 75px;
+    margin-bottom: 60px;
 }
 
 nav div {
     flex-basis: 0;
     flex-grow: 1;
     background-color: rgba(223, 224, 228, 0.8);
-    font-family: helvetica;
+    font-family: "barlow semi condensed";
     padding: 20px 0px;
     border-radius: 10px;
     margin: 2px;
@@ -41,8 +48,9 @@ nav div:hover {
 }
 
 .marked {
-    border: 1px solid white;
+    border: 2px solid white;
     font-weight: bold;
+    box-shadow: 0px 0px 5px white;
 }
 
 .marked:hover {
@@ -52,14 +60,28 @@ nav div:hover {
 }
 
 .best {
+    font-family: "barlow semi condensed";
+    color: rgba(223, 224, 228, 0.8);
     background-color: rgba(0, 0, 0, 0.2);
     margin: 0px 0px 20px 0px;
-    padding: 20px 20px;
+    padding: 15px 15px;
     border: 1px solid rgb(189, 188, 188);
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+/* Album Data */
+
+.album_data div h1 {
+    font-family: "bungee outline";
+    color: rgba(223, 224, 228, 0.8);
+}
+
+.album_data div h2 {
+    color: white;
+    font-family: "barlow semi condensed";
 }
 
 .album_data div h1, .album_data div h2 {
@@ -68,7 +90,8 @@ nav div:hover {
 
 .album_data {
     grid-column: 1 / span 3;
-    grid-row: 1;
+    grid-row: 1 / span 3;
+    margin-right: 15px;
 }
 
 .album_data div ul {
@@ -78,8 +101,10 @@ nav div:hover {
 
 .album_data div p {
     margin-top: 50px;
-    margin-bottom: 3px;
+    margin-bottom: 0;
 }
+
+/* Cover */
 
 .cover {
     display: grid;
@@ -87,17 +112,24 @@ nav div:hover {
     grid-column: 4 / span 2;
     grid-row: 1;
 }
+
+.show_hover {
+    z-index: 1;
+}
+
 .show_hover, .show_not_hover {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     width: 100%;
-    height: auto;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
 }
 
+/* Under Cover lists */
+
 .song_list {
     margin-top: 10px;
+    margin-bottom: 10px;
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -105,32 +137,35 @@ nav div:hover {
     grid-row: 2;
 }
 
-.top_actors {
-    font-size: 1.2vw;
-    padding: 20px;
-    background-color: rgb(44, 44, 44);
+#season_3 .song_list .top_actors, #season_3 .song_list .top_writers {
+    background-color: rgb(52 49 42);
     color: #f9e9c9;
+}
+
+#season_4 .song_list .top_actors, #season_4 .song_list .top_writers {
+    background-color: #d00816;
+    color: #d2ae2a;
+}
+
+.top_actors {
     border-bottom-left-radius: 30px;
+    padding: 20px;
 }
 .top_actors h2 {
-    font-size: 1.2vw;
     margin: 0;
 }
 .top_actors ul {
+    padding-left: 20px;
     margin: 0;
     list-style-type: decimal;
-    padding-left: 20px;
+    text-align: left;
 }
 
 .top_writers {
-    font-size: 1.2vw;
     padding: 20px;
-    background-color: rgb(44, 44, 44);
-    color: #f9e9c9;
     border-bottom-right-radius: 30px;
 }
 .top_writers h2 {
-    font-size: 1.2vw;
     margin: 0;
 }
 .top_writers ul {
@@ -139,59 +174,123 @@ nav div:hover {
     padding-left: 20px;
 }
 
-#season_3 .anecdotes {
-    font-size: 1.2vw;
+/*Anecdotes */
+
+#season_3 .anecdotes, #season_4 .anecdotes {
     list-style-type: none;
-    margin: 10px 0px;
-    padding: 0px;
+    padding: 0;
     display: grid;
     grid-column: 1 / span 5;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    gap: 5px;
+    margin: 0;
 }
 
-.top_right_90 {
+/* Section 1 */
+
+#season_3 .anecdotes .top_right_90 {
     grid-column: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px 20px;
 
     background-color: #f9e9c9;
     color: rgb(44, 44, 44);
     border-radius: 20px 0 20px 20px;
 }
 
-.empty {
+#season_3 .anecdotes .empty {
     grid-column: 2;
     grid-row: 1;
 }
 
-.two_wide {
+#season_3 .anecdotes .two_wide {
     grid-column: 3 / span 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px 20px;
 
     background-color: #f9e9c9;
     color: rgb(44, 44, 44);
     border-radius: 20px 20px 20px 0px;
 }
 
-.image_1 {
+#season_3 .anecdotes .image_1 {
+    background-image: url(images/CharlieBrooker.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 20px;
     grid-column: 5;
 }
 
-.bottom_right_90 {
+#season_3 .anecdotes .bottom_right_90 {
     grid-column: 6;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
-
+    padding: 20px 20px;
     background-color: #f9e9c9;
     color: rgb(44, 44, 44);
     border-radius: 20px 20px 0px 20px;
 
+}
+
+/* Section 2 */
+
+#season_4 .anecdotes .bottom_left_90 {
+    background-color: #d2ae2a;
+    color: #d00816;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 20px 0px;
+    padding: 20px 20px;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+#season_4 .anecdotes .top_left_90 {
+    background-color: #d2ae2a;
+    color: #d00816;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 20px;
+    padding: 20px 20px;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#season_4 .anecdotes .image_1 {
+    background-image: url(images/Charlie\ and\ William.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    color: rgba(223, 224, 228, 0.8);
+    grid-column: 4 / span 2;
+    grid-row: 1;
+    padding: 20px 20px;
+}
+
+#season_4 .anecdotes .empty {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#season_4 .anecdotes .bottom_right_90 {
+    background-color: #d2ae2a;
+    color: #d00816;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 20px;
+    padding: 20px 20px;
+    grid-column: 6;
+    grid-row: 1;
 }
