@@ -59,6 +59,7 @@ nav div:hover {
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr auto auto;
 }
 
 .album_data div h1, .album_data div h2 {
@@ -67,6 +68,7 @@ nav div:hover {
 
 .album_data {
     grid-column: 1 / span 3;
+    grid-row: 1;
 }
 
 .album_data div ul {
@@ -81,16 +83,17 @@ nav div:hover {
 
 .cover {
     display: grid;
+    object-fit: contain;
     grid-column: 4 / span 2;
+    grid-row: 1;
 }
 .show_hover, .show_not_hover {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     width: 100%;
-    height: 100%;
+    height: auto;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    object-fit: cover;
 }
 
 .song_list {
@@ -99,15 +102,18 @@ nav div:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column: 4 / span 2;
+    grid-row: 2;
 }
 
 .top_actors {
+    font-size: 1.2vw;
     padding: 20px;
     background-color: rgb(44, 44, 44);
     color: #f9e9c9;
     border-bottom-left-radius: 30px;
 }
 .top_actors h2 {
+    font-size: 1.2vw;
     margin: 0;
 }
 .top_actors ul {
@@ -117,12 +123,14 @@ nav div:hover {
 }
 
 .top_writers {
+    font-size: 1.2vw;
     padding: 20px;
     background-color: rgb(44, 44, 44);
     color: #f9e9c9;
     border-bottom-right-radius: 30px;
 }
 .top_writers h2 {
+    font-size: 1.2vw;
     margin: 0;
 }
 .top_writers ul {
@@ -132,6 +140,7 @@ nav div:hover {
 }
 
 #season_3 .anecdotes {
+    font-size: 1.2vw;
     list-style-type: none;
     margin: 10px 0px;
     padding: 0px;
