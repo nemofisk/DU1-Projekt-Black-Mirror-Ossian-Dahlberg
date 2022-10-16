@@ -54,7 +54,7 @@ nav div:hover {
 }
 
 .marked {
-    border: 2px solid white;
+    border: 1px solid white;
     font-weight: bold;
     box-shadow: 0px 0px 5px white;
 }
@@ -175,6 +175,7 @@ nav div:hover {
 }
 .top_actors h2 {
     margin: 0;
+    font-weight: normal;
 }
 .top_actors ul {
     padding-left: 17px;
@@ -190,6 +191,7 @@ nav div:hover {
 }
 .top_writers h2 {
     margin: 0;
+    font-weight: normal;
 }
 .top_writers ul {
     margin: 0;
@@ -521,4 +523,64 @@ footer {
         grid-row: 2;
     }
     
+}
+
+@media (max-width: 500px) {
+    .greybox {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .best {
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr auto auto auto
+    }
+
+    .cover {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin-right: 0;
+    }
+
+    .show_hover, .show_not_hover {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .song_list {
+        margin-top: 8px;
+        gap: 8px;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        font-size: 3.5vw;
+    }
+
+    .song_list div ul {
+        padding-left: 3.4vw;
+    }
+
+    .song_list div {
+        justify-content: flex-start;
+    }
+
+    .top_actors {
+        border-radius: 0px 0px 0px 20px;
+    }
+
+    .top_writers {
+        border-radius: 0px 0px 20px 0px;
+    }
+
+    .album_data {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    .anecdotes {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
