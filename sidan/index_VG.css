@@ -9,7 +9,7 @@ body {
 
 .greybox {
     background-color: rgba(0, 0, 0, 0.3);
-    margin: 100px 50px 100px 50px;
+    margin: 100px 40px;
     border-radius: 20px;
 }
 
@@ -372,6 +372,14 @@ footer {
 }
 
 @media (max-width: 800px) {
+    body {
+        background-image: url(images_tablet_phone/background.jpg);
+    }
+
+    .greybox {
+        margin: 100px 30px;
+    }
+
     header {
         text-align: center;
         font-size: 5vw;
@@ -467,6 +475,7 @@ footer {
     }
 
     #season_3 .anecdotes .image_1 {
+        background-image: url(images_tablet_phone/CharlieBrooker.jpg);
         grid-column: 2;
         grid-row: 2;
     }
@@ -487,6 +496,7 @@ footer {
     }
 
     #season_4 .anecdotes .image_1 {
+        background-image: url(images_tablet_phone/Charlie_and_William.jpg);
         grid-column: 2 / span 2;
         grid-row: 2;
     }
@@ -511,5 +521,4 @@ footer {
         grid-row: 2;
     }
     
-
 }
