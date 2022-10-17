@@ -85,7 +85,7 @@ nav div:hover {
 
 .album_data div h1 {
     font-family: "bungee outline";
-    color: rgba(223, 224, 228, 0.8);
+    color: rgba(255, 255, 255, .8);
     font-size: 26px;
 }
 
@@ -123,7 +123,14 @@ nav div:hover {
     object-fit: contain;
     grid-column: 4 / span 2;
     grid-row: 1;
+}
 
+#season_3 .cover {
+    background-color: rgb(52 49 42);
+}
+
+#season_4 .cover {
+    background-color: #d00816;
 }
 
 .cover:hover .show_not_hover {
@@ -176,6 +183,7 @@ nav div:hover {
 .top_actors h2 {
     margin: 0;
     font-weight: normal;
+    margin-bottom: 3px;
 }
 .top_actors ul {
     padding-left: 17px;
@@ -192,6 +200,7 @@ nav div:hover {
 .top_writers h2 {
     margin: 0;
     font-weight: normal;
+    margin-bottom: 3px;
 }
 .top_writers ul {
     margin: 0;
@@ -395,7 +404,6 @@ footer {
         grid-column: 1 / span 3;
         grid-row: 1;
         margin-right: 10px;
-        background-color: rgb(52 49 42);
         border-radius: 20px 0px 0px 20px;
     }
 
@@ -432,8 +440,8 @@ footer {
     .album_data {
         grid-column: 1 / span 5;
         grid-row: 2;
-        margin: 15px 0px;
-        font-size: 2.3vw;
+        margin: 10px 0px;
+        font-size: 2.5vw;
     }
 
     .album_data div h1 {
@@ -448,7 +456,7 @@ footer {
         grid-row: 3;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        font-size: 2.3vw;
+        font-size: 2.5vw;
     }
 
     #season_3 .anecdotes .top_right_90 {
@@ -531,6 +539,10 @@ footer {
         border-radius: 0;
     }
 
+    nav {
+        font-size: 3vw;
+    }
+
     .best {
         grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr auto auto auto
@@ -553,7 +565,7 @@ footer {
         grid-row: 2;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        font-size: 3.5vw;
+        font-size: 3.3vw;
     }
 
     .song_list div ul {
@@ -575,6 +587,15 @@ footer {
     .album_data {
         grid-column: 1 / span 2;
         grid-row: 3;
+        font-size: 4vw;
+    }
+
+    .album_data div h1 {
+        font-size: 7vw;
+    }
+
+    .album_data div h2 {
+        font-size: 4vw;
     }
 
     .anecdotes {
@@ -582,5 +603,51 @@ footer {
         grid-row: 4;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        font-size: 3.3vw;
     }
+
+    #season_3 .anecdotes .top_right_90 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #season_3 .anecdotes .empty {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #season_3 .anecdotes .two_wide {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+    }
+
+    #season_3 .anecdotes .image_1 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #season_3 .anecdotes .bottom_right_90 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    #season_4 .anecdotes .bottom_left_90 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    #season_4 .anecdotes .top_left_90 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #season_4 .anecdotes .image_1 {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        background-position: top;
+    }
+    #season_4 .anecdotes .empty {
+        display: none;
+    }
+    #season_4 .anecdotes .bottom_right_90 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
 }
