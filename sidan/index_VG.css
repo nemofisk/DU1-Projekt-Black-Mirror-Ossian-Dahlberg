@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    background-image: url(images_desktop/background.jpg);
+    background-image: url(images_desktop/desktop.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .greybox {
@@ -14,23 +14,22 @@ body {
 }
 
 .contentbox {
-    padding: 10px 15px;
+    padding: 15px;
 }
 
 header {
     font-family: "bungee shade";
     color: rgb(223, 224, 228);
-    margin-bottom: 60px;
     font-size: 30px;
 }
 
 header h1 {
-    margin-top: 0px;
+    margin: 0;
 }
 
 nav {
     display: flex;
-    margin-bottom: 60px;
+    margin: 60px 0px;
     font-size: 20px;
 }
 
@@ -66,15 +65,16 @@ nav div:hover {
 }
 
 .best {
-    font-family: "barlow semi condensed";
-    color: rgba(223, 224, 228, 0.8);
-    background-color: rgba(0, 0, 0, 0.2);
-    margin: 0px 0px 20px 0px;
-    padding: 13px 13px;
-    border: 1px solid rgb(189, 188, 188);
-    border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+
+    font-family: "barlow semi condensed";
+    border: 1px solid rgb(189, 188, 188);
+    border-radius: 20px;
+    margin: 0px 0px 20px 0px;
+    padding: 13px;
+    color: rgba(223, 224, 228, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #season_4 {
@@ -86,16 +86,14 @@ nav div:hover {
 .album_data div h1 {
     font-family: "bungee outline";
     color: rgba(255, 255, 255, .8);
-    font-size: 26px;
+    font-size: 32px;
+    margin: 0;
 }
 
 .album_data div h2 {
     color: white;
     font-family: "barlow semi condensed";
-    font-size: 22.5px;
-}
-
-.album_data div h1, .album_data div h2 {
+    font-size: 27.7px;
     margin: 0;
 }
 
@@ -117,20 +115,10 @@ nav div:hover {
 }
 
 /* Cover */
-
 .cover {
     display: grid;
-    object-fit: contain;
     grid-column: 4 / span 2;
     grid-row: 1;
-}
-
-#season_3 .cover {
-    background-color: rgb(52 49 42);
-}
-
-#season_4 .cover {
-    background-color: #d00816;
 }
 
 .cover:hover .show_not_hover {
@@ -144,154 +132,136 @@ nav div:hover {
     transition-duration: 1s;
 }
 
-
 .show_hover, .show_not_hover {
-    border-radius: 20px 20px 0px 0px;
-    width: 100%;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
 }
 
 /* Under Cover lists */
-
 .song_list {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    gap: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column: 4 / span 2;
     grid-row: 2;
+
+
+    gap: 10px;
     font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#season_3 .song_list .top_actors, #season_3 .song_list .top_writers {
+#season_3 .top_actors, #season_3 .top_writers {
     background-color: rgb(52 49 42);
     color: #f9e9c9;
+
+    padding: 20px 15px;
 }
 
-#season_4 .song_list .top_actors, #season_4 .song_list .top_writers {
+#season_4 .top_actors, #season_4 .top_writers {
     background-color: #d00816;
     color: #d2ae2a;
+
+    padding: 20px 15px;
+}
+
+.song_list h2 {
+    margin: 0;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+.song_list ul {
+    padding-left: 17px;
+    margin: 0;
+    list-style-type: decimal;
 }
 
 .top_actors {
     border-bottom-left-radius: 20px;
-    padding: 15px;
-    padding-right: 0px;
 }
-.top_actors h2 {
-    margin: 0;
-    font-weight: normal;
-    margin-bottom: 3px;
-}
-.top_actors ul {
-    padding-left: 17px;
-    margin: 0;
-    list-style-type: decimal;
-    text-align: left;
-}
-
 .top_writers {
-    padding: 15px;
-    padding-right: 0px;
     border-bottom-right-radius: 20px;
 }
-.top_writers h2 {
-    margin: 0;
-    font-weight: normal;
-    margin-bottom: 3px;
-}
-.top_writers ul {
-    margin: 0;
-    list-style-type: decimal;
-    padding-left: 17px;
-}
 
-/* Anecdotes */
+/* ---- Anecdotes ---- */
 
 .anecdotes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column: 1 / span 5;
+
     list-style-type: none;
     padding: 0;
-    display: grid;
-    grid-column: 1 / span 5;
-    grid-template-columns: repeat(6, 1fr);
     gap: 5px;
     margin: 0;
     font-size: 15px;
 }
 
+.anecdotes li {
+    display: flex;
+    align-items: center;
+
+    padding: 20px 15px;
+}
+
+.top_left_90 { border-radius: 0px 20px 20px 20px;}
+.top_right_90 { border-radius: 20px 0px 20px 20px; }
+.bottom_right_90 { border-radius: 20px 20px 0px 20px;}
+.bottom_left_90 { border-radius: 20px 20px 20px 0px; }
+
+
 /* Section 1 */
+
+#season_3 .anecdotes li {
+    background-color: #f9e9c9;
+    color: rgb(44, 44, 44);
+}
 
 #season_3 .anecdotes .top_right_90 {
     grid-column: 1;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-
-    background-color: #f9e9c9;
-    color: rgb(44, 44, 44);
-    border-radius: 20px 0 20px 20px;
 }
 
 #season_3 .anecdotes .empty {
     grid-column: 2;
     grid-row: 1;
+
+    background-color: transparent;
 }
 
 #season_3 .anecdotes .two_wide {
     grid-column: 3 / span 2;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-
-    background-color: #f9e9c9;
-    color: rgb(44, 44, 44);
-    border-radius: 20px 20px 20px 0px;
 }
 
 #season_3 .anecdotes .image_1 {
     background-image: url(images_desktop/CharlieBrooker.jpg);
     background-size: cover;
     background-position: center;
-    border-radius: 0px 20px 20px 20px;
-    display: flex;
+
     align-items: flex-end;
-    padding: 15px;
     grid-column: 5;
+
+    color: rgba(223, 224, 228, 0.8);
 }
 
 #season_3 .anecdotes .bottom_right_90 {
     grid-column: 6;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background-color: #f9e9c9;
-    color: rgb(44, 44, 44);
-    border-radius: 20px 20px 0px 20px;
-
 }
 
 /* Section 2 */
 
-#season_4 .anecdotes .bottom_left_90 {
+#season_4 .anecdotes li {
     background-color: #d2ae2a;
     color: #d00816;
-    display: flex;
-    align-items: center;
-    border-radius: 20px 20px 20px 0px;
-    padding: 15px;
+}
+
+#season_4 .anecdotes .bottom_left_90 {
     grid-column: 1 / span 2;
     grid-row: 1;
 }
 
 #season_4 .anecdotes .top_left_90 {
-    background-color: #d2ae2a;
-    color: #d00816;
-    display: flex;
-    align-items: center;
-    border-radius: 0px 20px 20px 20px;
-    padding: 15px;
     grid-column: 3;
     grid-row: 1;
 }
@@ -300,26 +270,22 @@ nav div:hover {
     background-image: url(images_desktop/Charlie_and_William.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
+
     align-items: flex-end;
-    color: rgba(223, 224, 228, 0.8);
     grid-column: 4 / span 2;
     grid-row: 1;
-    padding: 15px;
+
+    color: rgba(223, 224, 228, 0.8);
 }
 
 #season_4 .anecdotes .empty {
     grid-column: 3;
     grid-row: 1;
+
+    background-color: transparent;
 }
 
 #season_4 .anecdotes .bottom_right_90 {
-    background-color: #d2ae2a;
-    color: #d00816;
-    display: flex;
-    align-items: center;
-    border-radius: 20px 20px 0px 20px;
-    padding: 15px;
     grid-column: 6;
     grid-row: 1;
 }
@@ -329,6 +295,9 @@ footer {
     font-family: "barlow semi condensed";
     font-size: 15px;
 }
+
+
+/* Between 900px and 1111px */
 
 @media (min-width: 900px) and (max-width: 1111px) {
     header h1 {
@@ -340,11 +309,11 @@ footer {
     }
 
     .album_data div h1 {
-        font-size: 2.3vw;
+        font-size: 2.9vw;
     }
 
     .album_data div h2 {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     .album_data, .song_list, .anecdotes {
@@ -356,7 +325,11 @@ footer {
     }
 }
 
+
+/* Below 900 px */
+
 @media (max-width: 899px) {
+    /* Nav & Header */
     header {
         font-size: 24.3px;
     }
@@ -365,12 +338,13 @@ footer {
         font-size: 16.3px;
     }
 
+     /* Album data */
     .album_data div h1 {
-        font-size: 20.7px;
+        font-size: 26px;
     }
 
     .album_data div h2 {
-        font-size: 18px;
+        font-size: 22.5px;
     }
 
     .album_data, .song_list, .anecdotes {
@@ -382,15 +356,19 @@ footer {
     }
 }
 
+
+/* Below 800px */
+
 @media (max-width: 800px) {
     body {
-        background-image: url(images_tablet_phone/background.jpg);
+        background-image: url(images_tablet_phone/tablet.jpg);
     }
 
     .greybox {
         margin: 100px 30px;
     }
 
+    /* Nav & Header */
     header {
         text-align: center;
         font-size: 5vw;
@@ -399,12 +377,37 @@ footer {
     nav {
         font-size: 2.8vw;
     }
+    
+    /* Album data */
+    .album_data {
+        grid-column: 1 / span 5;
+        grid-row: 2;
 
+        margin: 10px 0px;
+        font-size: 2.5vw;
+    }
+
+    .album_data div h1 {
+        font-size: 5vw;
+    }
+
+    .album_data div h2 {
+        font-size: 2.8vw;
+    }
+
+    /* Cover */
     .cover {
         grid-column: 1 / span 3;
         grid-row: 1;
         margin-right: 10px;
-        border-radius: 20px 0px 0px 20px;
+        border-radius: 20px 20px 0px 20px;
+    }
+
+    #season_3 .cover {
+        background-color: rgb(52 49 42);
+    }
+    #season_4 .cover {
+        background-color: #d00816;
     }
 
     .cover:hover .show_not_hover {
@@ -413,12 +416,15 @@ footer {
 
     .show_hover, .show_not_hover {
         border-radius: 20px 0px 0px 0px;
+        max-height: 93%;
     }
 
+    /* Under cover list */
     .song_list {
         grid-column: 4 / span 2;
         grid-row: 1;
         grid-template-columns: 1fr;
+        
         margin: 0px;
         font-size: 2vw;
     }
@@ -437,28 +443,18 @@ footer {
         border-radius: 0px 20px 0px 0px;
     }
 
-    .album_data {
-        grid-column: 1 / span 5;
-        grid-row: 2;
-        margin: 10px 0px;
-        font-size: 2.5vw;
-    }
 
-    .album_data div h1 {
-        font-size: 5vw;
-    }
-
-    .album_data div h2 {
-        font-size: 2.8vw;
-    }
+    /* ---- Anecdotes ---- */
 
     .anecdotes {
-        grid-row: 3;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
+
+        grid-row: 3;
         font-size: 2.5vw;
     }
 
+    /* Section 1 */
     #season_3 .anecdotes .top_right_90 {
         grid-column: 1;
         grid-row: 1;
@@ -495,6 +491,7 @@ footer {
         grid-row: 2;
     }
 
+    /* Section 2 */
     #season_4 .anecdotes .bottom_left_90 {
         grid-column: 1 / span 2;
         grid-row: 1;
@@ -533,10 +530,22 @@ footer {
     
 }
 
+
+/* Below 500px */
+
 @media (max-width: 500px) {
+    body {
+        background-image: url(images_tablet_phone/phone.jpg);
+    }
+
     .greybox {
         margin: 0;
         border-radius: 0;
+    }
+
+    /* Nav & Header */
+    header h1 {
+        font-size: 15vw;
     }
 
     nav {
@@ -544,46 +553,10 @@ footer {
     }
 
     .best {
-        grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr auto auto auto
     }
 
-    .cover {
-        grid-column: 1 / span 2;
-        grid-row: 1;
-        margin-right: 0;
-    }
-
-    .show_hover, .show_not_hover {
-        border-radius: 20px 20px 0px 0px;
-    }
-
-    .song_list {
-        margin-top: 8px;
-        gap: 8px;
-        grid-column: 1 / span 2;
-        grid-row: 2;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        font-size: 3.3vw;
-    }
-
-    .song_list div ul {
-        padding-left: 3.4vw;
-    }
-
-    .song_list div {
-        justify-content: flex-start;
-    }
-
-    .top_actors {
-        border-radius: 0px 0px 0px 20px;
-    }
-
-    .top_writers {
-        border-radius: 0px 0px 20px 0px;
-    }
-
+    /* Album data */
     .album_data {
         grid-column: 1 / span 2;
         grid-row: 3;
@@ -598,12 +571,61 @@ footer {
         font-size: 4vw;
     }
 
-    .anecdotes {
+    /* Cover */
+    .cover {
         grid-column: 1 / span 2;
-        grid-row: 4;
+        grid-row: 1;
+        margin-right: 0;
+    }
+
+    .show_hover, .show_not_hover {
+        border-radius: 20px 20px 0px 0px;
+        max-height: 100%;
+    }
+
+    /* Under cover list */
+    .song_list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+
+        margin-top: 8px;
+        gap: 8px;
+        font-size: 3.3vw;
+    }
+
+    .song_list div {
+        justify-content: flex-start;
+    }
+
+    .song_list div ul {
+        padding-left: 3.4vw;
+    }
+
+    .top_actors {
+        border-radius: 0px 0px 0px 20px;
+    }
+
+    .top_writers {
+        border-radius: 0px 0px 20px 0px;
+    }
+
+
+    /* ---- Anecdotes ---- */
+
+    .anecdotes {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        grid-column: 1 / span 2;
+        grid-row: 4;
         font-size: 3.3vw;
+    }
+
+    /* Section 1 */
+    #season_3 .anecdotes .top_left_90 {
+        grid-column: 2;
+        grid-row: 2;
     }
 
     #season_3 .anecdotes .top_right_90 {
@@ -611,24 +633,26 @@ footer {
         grid-row: 1;
     }
 
-    #season_3 .anecdotes .empty {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    #season_3 .anecdotes .two_wide {
-        grid-column: 2 / span 2;
-        grid-row: 1;
-    }
-
-    #season_3 .anecdotes .image_1 {
-        grid-column: 2;
-        grid-row: 2;
-    }
     #season_3 .anecdotes .bottom_right_90 {
         grid-column: 3;
         grid-row: 2;
     }
 
+    #season_3 .anecdotes .bottom_left_90 {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+    }
+
+    #season_3 .anecdotes .empty {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #season_3 .anecdotes .empty.phone_empty {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* Section 2 */
     #season_4 .anecdotes .bottom_left_90 {
         grid-column: 1 / span 2;
         grid-row: 1;
