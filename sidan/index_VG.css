@@ -601,6 +601,10 @@ footer {
         font-size: 3.3vw;
     }
 
+    .anecdotes li {
+        height: 190px;
+    }
+
     /* Section 1 */
     #season_3 .anecdotes .top_left_90 {
         grid-column: 2;
